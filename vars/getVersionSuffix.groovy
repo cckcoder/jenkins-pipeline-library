@@ -5,6 +5,7 @@ def call(Map config) {
     if (config.isReleaseCandidate) {
       return config.rcNumber
     } else {
+      echo "here"
       return config.rcNumber + '+ci.' + env.BUILD_NUMBER
     }
   }
